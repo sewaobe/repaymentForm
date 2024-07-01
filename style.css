@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    background-color: hsl(202, 86%, 94%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    margin: 209px 216px;
+}
+
+/* repaymentForm */
+.repaymentForm {
+    margin: 45px 40px 40px 40px;
+}
+
+/* 1. Header */
+.repaymentForm .repaymentFormHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.repaymentForm .repaymentFormHeader p {
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* 2. Container */
+.repaymentForm .repaymentFormContainer {
+    margin: 45px 0 30px 0;
+}
+.repaymentForm .repaymentFormContainer .repaymentFormGroupRow {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.repaymentForm .repaymentFormContainer .repaymentFormGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.repaymentForm .repaymentFormContainer .repaymentFormGroup input[type='text'] {
+    height: 50px;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.repaymentFormGroup label {
+    padding-bottom: 12px;
+}
+.repaymentFormMortgageType {
+    border: 2px solid hsl(200, 26%, 54%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid hsl(61, 70%, 52%);
+    }
+}
+.repaymentFormMortgageType label {
+    padding-bottom: 0;
+    font-weight: 700;
+}
+.repaymentFormMortgageType input {
+    width: 20px;
+    height: 20px;
+    margin: 15px 19px;
+}
+
+/* CSS icon to Element input[type="text"]*/
+span[id='mortgageAmount'],
+span[id='mortgageTerm'],
+span[id='mortgageInterestRate'] {
+    position: relative;
+}
+span[id='mortgageAmount']::after,
+span[id='mortgageTerm']::after,
+span[id='mortgageInterestRate']::after {
+    height: 46px;
+    background-color: hsl(202, 86%, 94%);
+    font-weight: 600;
+    padding: 0 16px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[id='mortgageAmount'] {
+    padding-left: 45px;
+}
+span[id='mortgageAmount']::after {
+    font-family: 'FontAwesome';
+    content: '\f154';
+    border-radius: 4px 0 0 4px;
+    top: -48px;
+    left: 2px;
+}
+
+input[id='mortgageTerm'] {
+    padding-right: 75px;
+}
+span[id='mortgageTerm']::after {
+    content: 'years';
+    border-radius: 0px 4px 4px 0px;
+    top: -48px;
+    left: 124px;
+}
+
+input[id='mortgageInterestRate'] {
+    padding-right: 50px;
+}
+span[id='mortgageInterestRate']::after {
+    content: '%';
+    border-radius: 0px 4px 4px 0px;
+    top: -48px;
+    left: 150px;
+}
+
+/* CSS input[type="radio"] typeQuery*/
+input[name='mortgageTypeAmount'] {
+    width: 200px;
+}
+input[id='mortgageTerm'] {
+    margin-right: 24px;
+}
+
+/* Button */
+.btnCalculator {
+    width: 314px;
+    height: 54px;
+    background-color: hsl(61, 70%, 52%);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: hsl(61, 72%, 68%);
+        cursor: pointer;
+    }
+
+    * {
+        &:hover {
+            background-color: hsl(61, 72%, 68%);
+            cursor: pointer;
+        }
+    }
+}
+.btnCalculator button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+}
+.btnCalculator #buttonIcon {
+    padding-right: 10px;
+    margin-left: -35px;
+}
+
+/* Mortgage Result */
+.repaymentResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(202, 55%, 16%);
+    color: white;
+    border-radius: 0 25px 25px 80px;
+}
+
+.repaymentResultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 43px;
+}
+
+.repaymentResultContainer h2 {
+    font-size: 21px;
+    padding: 15px 0;
+}
+
+.repaymentResultContainer .repaymentResultContent {
+    color: hsl(200, 26%, 54%);
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
