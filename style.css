@@ -81,6 +81,10 @@ body {
         cursor: pointer;
         border: 2px solid hsl(61, 70%, 52%);
     }
+
+    &:has(> input:checked) {
+        background-color: hsl(62, 59%, 90%);
+    }
 }
 .repaymentFormMortgageType label {
     padding-bottom: 0;
@@ -112,7 +116,7 @@ span[id='mortgageInterestRate']::after {
 }
 
 input[id='mortgageAmount'] {
-    padding-left: 45px;
+    padding-left: 50px;
 }
 span[id='mortgageAmount']::after {
     font-family: 'FontAwesome';
@@ -124,6 +128,7 @@ span[id='mortgageAmount']::after {
 
 input[id='mortgageTerm'] {
     padding-right: 75px;
+    padding-left: 15px;
 }
 span[id='mortgageTerm']::after {
     content: 'years';
@@ -133,6 +138,7 @@ span[id='mortgageTerm']::after {
 }
 
 input[id='mortgageInterestRate'] {
+    padding-left: 15px;
     padding-right: 50px;
 }
 span[id='mortgageInterestRate']::after {
@@ -142,7 +148,28 @@ span[id='mortgageInterestRate']::after {
     left: 150px;
 }
 
-/* CSS input[type="radio"] typeQuery*/
+/* input focus */
+input[id='mortgageAmount'],
+input[id='mortgageTerm'],
+input[id='mortgageInterestRate'] {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 16px;
+    font-weight: 700;
+}
+input[id='mortgageAmount']:focus,
+input[id='mortgageTerm']:focus,
+input[id='mortgageInterestRate']:focus {
+    outline: none;
+    border: 2px solid hsl(61, 70%, 52%);
+}
+input[id='mortgageAmount']:focus + span[id='mortgageAmount']::after,
+input[id='mortgageTerm']:focus + span[id='mortgageTerm']::after,
+input[id='mortgageInterestRate']:focus
+    + span[id='mortgageInterestRate']::after {
+    background-color: hsl(61, 70%, 52%);
+}
+
+/* CSS typeMortgageQuantity Focus*/
 input[name='mortgageTypeAmount'] {
     width: 200px;
 }
@@ -150,6 +177,10 @@ input[id='mortgageTerm'] {
     margin-right: 24px;
 }
 
+/* input[radio] */
+input[name='mortgageType'] {
+    accent-color: yellow;
+}
 /* Button */
 .btnCalculator {
     width: 314px;
@@ -211,4 +242,17 @@ input[id='mortgageTerm'] {
     font-size: 15px;
     line-height: 20px;
     text-align: center;
+}
+
+/* inValid */
+.inValid input {
+    border: 2px solid hsl(4, 69%, 50%);
+}
+.inValid span::after {
+    color: white;
+    background-color: hsl(4, 69%, 50%);
+}
+.inValid p {
+    color: hsl(4, 69%, 50%);
+    padding-top: 10px;
 }
