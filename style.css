@@ -224,7 +224,8 @@ input[name='mortgageType'] {
     border-radius: 0 25px 25px 80px;
 }
 
-.repaymentResultContainer {
+/* No result */
+.repaymentResult--No {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,18 +233,63 @@ input[name='mortgageType'] {
     margin: 0 43px;
 }
 
-.repaymentResultContainer h2 {
+.repaymentResult--No h2 {
     font-size: 21px;
     padding: 15px 0;
 }
 
-.repaymentResultContainer .repaymentResultContent {
+.repaymentResult--No .repaymentResultContent {
     color: hsl(200, 26%, 54%);
     font-size: 15px;
     line-height: 20px;
     text-align: center;
 }
+/* Yes result */
+.repaymentResult--Yes {
+    margin: 0 35px;
+    padding-bottom: 90px;
+}
+.repaymentResult--Yes h2 {
+    padding: 20px 0;
+}
+.repaymentResult--Yes .repaymentResultDes {
+    color: hsl(200, 26%, 54%);
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 45px;
+}
+.repaymentResult--Yes .repaymentResult--Yes__container {
+    background-color: black;
+    padding: 30px 25px;
+    border-radius: 5px;
+    box-shadow: 0 -5px hsl(61, 70%, 52%);
+}
+.repaymentResultMonth {
+    margin-bottom: 20px;
+    border-bottom: 1px solid hsl(0, 0%, 47%);
+}
+.repaymentResultMonth--title,
+.repaymentResultTotal--title {
+    color: hsl(200, 26%, 54%);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.repaymentResult--Yes__container .repaymentResultMonth--result {
+    font-weight: 700;
+    font-size: 58px;
+    color: hsl(61, 70%, 52%);
+    margin-top: -10px;
+    padding-bottom: 40px;
+}
+.repaymentResultTotal {
+    padding-top: 20px;
+}
 
+.repaymentResult--Yes__container .repaymentResultTotal--result {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: -10px;
+}
 /* inValid */
 .inValid input {
     border: 2px solid hsl(4, 69%, 50%);

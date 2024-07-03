@@ -106,7 +106,7 @@
 
             <!-- Empty results start -->
             <div class="repaymentResult">
-                <div class="repaymentResultContainer">
+                <!-- <div class="repaymentResult--No">
                     <img
                         src="./assets/images/illustration-empty.svg"
                         alt="No image"
@@ -117,21 +117,40 @@
                         Complete the form and click “calculate repayments” to
                         see what your monthly repayments would be.
                     </p>
-                </div>
+                </div> -->
 
                 <!-- Empty results end -->
 
                 <!-- Completed results start -->
 
-                <!-- Your results
-    
-      Your results are shown below based on the information you provided. 
-      To adjust the results, edit the form and click “calculate repayments” again.
-    
-      Your monthly repayments
-    
-      Total you'll repay over the term -->
+                <div class="repaymentResult--Yes">
+                    <h2>Your results</h2>
 
+                    <p class="repaymentResultDes">
+                        Your results are shown below based on the information
+                        you provided. To adjust the results, edit the form and
+                        click “calculate repayments” again.
+                    </p>
+
+                    <div class="repaymentResult--Yes__container">
+                        <div class="repaymentResultMonth">
+                            <p class="repaymentResultMonth--title">
+                                Your monthly repayments
+                            </p>
+                            <p class="repaymentResultMonth--result">
+                                $1,797.74
+                            </p>
+                        </div>
+                        <div class="repaymentResultTotal">
+                            <p class="repaymentResultTotal--title">
+                                Total you'll repay over the term
+                            </p>
+                            <p class="repaymentResultTotal--result">
+                                $539,322.94
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Completed results end -->
             </div>
         </div>
